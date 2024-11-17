@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">app prueba</string>
+    <string name="salir">Salir</string>
+    <string name="ingresar">ingresar</string>
+    <string name="usuario">usuario</string>
+    <string name="bienvenido_a_nuestra_app_de_control_de_riego_y_cultivo_aqu_podr_s_monitorear_en_tiempo_real_la_temperatura_y_la_humedad_de_tus_cultivos_as_como_registrar_y_revisar_los_datos_de_cada_sesi_n_estamos_aqu_para_ayudarte_a_optimizar_tu_jard_n_y_asegurar_el_mejor_crecimiento_para_tus_plantas">¡Bienvenido a nuestra app de control de riego y cultivo! Aquí podrás monitorear en tiempo real la temperatura y la humedad de tus cultivos, así como registrar y revisar los datos de cada sesión. ¡Estamos aquí para ayudarte a optimizar tu jardín y asegurar el mejor crecimiento para tus plantas!</string>
+    <string name="volver">Volver</string>
+</resources>

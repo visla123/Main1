@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Mediciondiaria">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:background="#523833"
+        android:gravity="center_vertical"
+        android:text="Registros Diarios"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- ListView -->
+
+    <!-- Formulario de Entrada -->
+
+
+    <!-- Botón VOLVER -->
+
+
+    <ListView
+        android:id="@+id/lstLista"
+        android:layout_width="392dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="12dp"
+        android:divider="@color/black"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTitulo" />
+
+    <TableLayout
+        android:id="@+id/formulario"
+        android:layout_width="385dp"
+        android:layout_height="292dp"
+        android:layout_marginTop="8dp"
+        android:divider="@color/black"
+        android:padding="16dp"
+        android:stretchColumns="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lstLista">
+
+        <!-- Hora de Registro -->
+        <EditText
+            android:id="@+id/edid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:contentDescription="Campo para ingresar la localidad"
+            android:hint="Ingrese ID de dispositivo"
+            android:importantForAccessibility="yes"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edhum" />
+
+
+        <EditText
+            android:id="@+id/edhora"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:contentDescription="Campo para ingresar la hora de registro"
+            android:hint="Ingrese Hora de Registro"
+            android:importantForAccessibility="yes"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Temperatura Registrada -->
+        <EditText
+            android:id="@+id/edTemp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:contentDescription="Campo para ingresar la temperatura registrada"
+            android:hint="Ingrese la Temperatura Registrada"
+            android:importantForAccessibility="yes"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edhora" />
+
+        <!-- Humedad Registrada -->
+        <EditText
+            android:id="@+id/edhum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:contentDescription="Campo para ingresar la humedad registrada"
+            android:hint="Ingrese Humedad Registrada"
+            android:importantForAccessibility="yes"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edTemp" />
+
+        <!-- Localidad -->
+
+        <Spinner
+            android:id="@+id/spSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="s"
+            android:minHeight="48dp" />
+
+    </TableLayout>
+
+    <Button
+        android:layout_width="101dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="632dp"
+        android:backgroundTint="#A87FF1"
+        android:onClick="onClickAgregar"
+        android:textSize="10dp"
+        android:text="AGREGAR"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="101dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="636dp"
+        android:backgroundTint="#A87FF1"
+        android:onClick="onClickEliminar"
+        android:text="ELIMINAR"
+        android:textSize="10dp"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="101dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="632dp"
+        android:backgroundTint="#A87FF1"
+        android:onClick="onClickModificar"
+        android:text="MODIFICAR"
+        android:textColor="#000"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="101dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#A87FF1"
+        android:onClick="regreso"
+        android:text="Volver"
+        android:textColor="#000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
